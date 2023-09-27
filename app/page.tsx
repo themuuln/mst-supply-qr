@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 export default function Home() {
   const redirectToAppStore = () => {
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+    const userAgent = navigator.userAgent;
 
     if (/android/i.test(userAgent)) {
       window.location.href = 'https://play.google.com/store/apps/details?id=com.mindshift.usell';
