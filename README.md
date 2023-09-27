@@ -1,36 +1,39 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Redirect to App Store - Next.js
 
-## Getting Started
+This Next.js application provides a simple function for redirecting users to the appropriate app store or a generic landing page based on their device's operating system. It is customized for the "MST Supply" app.
 
-First, run the development server:
+## Usage
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+To use the `redirectToAppStore` function in your Next.js project for "MST Supply," follow these steps:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. Copy the `redirectToAppStore` function into your project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. Import the function where you need it in your code:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```javascript
+   import { redirectToAppStore } from './path/to/redirectToAppStore';
+   ```
 
-## Learn More
+3. Call the function when you want to redirect users:
 
-To learn more about Next.js, take a look at the following resources:
+   ```javascript
+   useEffect(() => {
+     redirectToAppStore();
+   }, []);
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Function Details
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+The `redirectToAppStore` function detects the user's device operating system using the `navigator.userAgent` property. It then redirects the user to one of the following destinations:
 
-## Deploy on Vercel
+- If the device is running Android, it redirects to the Google Play Store for "MST Supply."
+- If the device is running iOS (iPad, iPhone, or iPod), it redirects to the Apple App Store for "MST Supply."
+- For all other devices, it redirects to the [MST Supply website](https://agrosupplytrade.mn/).
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Please note that this code is specifically configured for the "MST Supply" app. Make sure to replace the placeholders with the correct app store URLs.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+This project is licensed under the [MIT License](LICENSE).
+
+---
