@@ -19,9 +19,9 @@ export default function Home() {
     }
   };
 
-  // useEffect(() => {
-  //   redirectToAppStore();
-  // }, []);
+  useEffect(() => {
+    redirectToAppStore();
+  }, []);
 
   return (
     <>
