@@ -13,9 +13,6 @@ export default function Home() {
       // Redirect to Apple App Store for iOS
       window.location.href =
         "https://apps.apple.com/id/app/mst-supply/id6447289799";
-    } else {
-      // Redirect to a generic landing page for other devices
-      window.location.href = "https://agrosupplytrade.mn/";
     }
   };
 
